@@ -190,3 +190,40 @@ alter table 테이블명 modify 컬럼명 데이터타입;
 * alter drop (테이블 안의 컬럼 삭제)
 alter table 테이블명 drop column 컬럼명;
 </pre>
+
+## 3. DML(Data Mainpulation Language)
+
+<pre>
+DML(Data Mainpulation Language)
+
+* insert (데이터를 저장)
+insert into 테이블명 (컬럼1, 컬럼2, ....) values (컬럼1의 데이터, 컬럼2의 데이터, ....)
+
+* update (수정)
+update 테이블명 set 컬럼명 = 바꿀명칭 where 조건
+
+* delete (삭제)
+delete from 테이블명 where 조건
+</pre>
+
+## 4. TCL(Transaction Control Language)
+
+<pre>
+* commit; 트렌젝션 데이터 실제로 저장
+
+* rollback; 트렌젝션 전으로 되돌림
+
+* savepoint 객체;
+savepoint C1;
+rollback to C2;
+</pre>
+
+## 5. DCL(Data Control Language) 
+
+<pre>
+* create (사용자 생성)
+create user (계정명) identified by (패스워드)
+
+* grant (계정의 권한 부여)
+grant resource, create session, create table to (계정명)
+</pre>
