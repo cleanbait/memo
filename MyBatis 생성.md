@@ -65,4 +65,11 @@ FrameWork는 간단하게 복잡한 절차를 간소화 해서 문제를 쉽게 
 자바에서 ctrl+n해서 xml 만들고 붙여넣기 한 뒤에 select쪽은 지워두기.   
 SqlSessionFactory(3).xml 쪽의 밑에 mapper resource쪽을 지금 만든 경로로 설정.
   
+<pre>
+지금까지 한게 Builder(1)를 통해서 Factory(3)라는 Static과 Mapper(11)를 만든것.
+이제 SqlSession(10)을 만들어서 Mapper(11)에 접근시켜야 한다.
 
+Mapperinterface(6)의 Mapper인스턴스를 만들어야 한다.   
+interface에다가 미리 지정을 해놓고 그 타입으로만 받게끔 코딩을 할 것이다.   
+리스트의 타입이나 또는 형변환할때 문제 발생 안되게 하려는 것.   
+</pre>
