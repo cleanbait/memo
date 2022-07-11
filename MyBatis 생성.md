@@ -28,3 +28,13 @@ M은 데이터와 관련된 처리를 하는 클래스를 별도로 만듦 (DAO 
 JDBC란 자바에서 데이터베이스에 접속할 수 있도록 하는 자바 API
 편의성을 위해 Mybatis라는 FrameWork를 쓴다.
 FrameWork는 간단하게 복잡한 절차를 간소화 해서 문제를 쉽게 해결하기 위해 만들어진 것.
+
+1. processing to run once는 딱 한번만 실행
+2. processing to run per requests는 요청이 있을때마다 실행
+이중에 한번만 실행 하는게 공용자원(Static) 1번
+
+1번쪽에 Factory Builder(1)가 있다.   
+여기서 SqlSession Factory(3)라는 Static한 공용자원을 만듦   
+이것을 가지고 SqlSession(10)을 만들고 여기에 매핑된 Mapper interface(6)를 통해 SQL명령이 기록되어 있는 MapperXML(11)파일에 접근   
+그 후 그 결과를 Controller(C)한테 돌려주는것이 Mybatis의 구성   
+이것을 V한테 넘겨주고 사용자한테 보여줌   
