@@ -1,12 +1,12 @@
 # SQL
   
-1. DQL(Data Query Language) 데이터를 조회 하는 명령어 (사람 따라 DQL이 DML에 포함됨)
+##1. DQL(Data Query Language) 데이터를 조회 하는 명령어 (사람 따라 DQL이 DML에 포함됨)
 
 <pre>
-##### select(검색)
+select(검색)
 select (조회 하고자 하는 컬럼명, 콤마로 구분) from 테이블명 where 조건
 
-##### alias (별칭)
+alias (별칭)
 컬럼명 as 별칭
 
 ★order by(데이터정렬)
