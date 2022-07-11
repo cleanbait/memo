@@ -16,9 +16,9 @@ DTO(Data Transfer Object)는 VO(Value Object)로 바꿔 말할 수 있는데
 MVC : Model(M),View(V),Controller(C)
 순서 C->M->V
 
-UI = View   
-manager = Controller 및 Medel   
-VO = 값을 저장하고 있는 클래스 (Person,Student)   
+View = UI   
+Controller 및 Medel = manager   
+값을 저장하고 있는 클래스 (Person,Student) = VO      
 
 M은 데이터와 관련된 처리를 하는 클래스를 별도로 만듦 (DAO : Data Access Object)
 
