@@ -12,3 +12,19 @@ DTO(Data Transfer Object)는 VO(Value Object)로 바꿔 말할 수 있는데
 데이터 교환을 위한 객체이다.
 
 <img src="https://user-images.githubusercontent.com/93306929/178177268-4fbd4294-3091-493a-b44d-e1a223363b2f.png" width="250" height="300"/>
+
+MVC : Model(M),View(V),Controller(C)
+순서 C->M->V
+
+UI = View
+manager = Controller 및 Medel
+VO = 값을 저장하고 있는 클래스 (Person,Student)
+
+M은 데이터와 관련된 처리를 하는 클래스를 별도로 만듦 (DAO : Data Access Object)
+
+<img src="https://user-images.githubusercontent.com/93306929/178178336-6c58fd5e-29d7-412a-8715-f569a740ab16.png" width="500" height="500"/>
+
+
+JDBC란 자바에서 데이터베이스에 접속할 수 있도록 하는 자바 API
+편의성을 위해 Mybatis라는 FrameWork를 쓴다.
+FrameWork는 간단하게 복잡한 절차를 간소화 해서 문제를 쉽게 해결하기 위해 만들어진 것.
