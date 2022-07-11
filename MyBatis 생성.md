@@ -38,3 +38,31 @@ FrameWork는 간단하게 복잡한 절차를 간소화 해서 문제를 쉽게 
 이것을 가지고 SqlSession(10)을 만들고 여기에 매핑된 Mapper interface(6)를 통해 SQL명령이 기록되어 있는 MapperXML(11)파일에 접근   
 그 후 그 결과를 Controller(C)한테 돌려주는것이 Mybatis의 구성   
 이것을 V한테 넘겨주고 사용자한테 보여줌   
+
+<img src="https://user-images.githubusercontent.com/93306929/178179523-10a60fe0-19d8-4dba-90a0-6087a280a470.PNG"/>
+1. Mybatis를 수동으로 설치하기 위해서 그림에 있는 'mybatis-xxx.jar' 파일을 다운로드
+
+<img src="https://user-images.githubusercontent.com/93306929/178179620-4d38dd15-9cd2-429c-b2f8-4f16c3bfe94c.PNG"/>
+2. c드라이브에 oracleexe->product->'jdbc6' 이것이랑 다운받은것 안의 'mybatis-3.5.7.jar' 이 두개를 java Build Path 라이브러리에 더하기
+
+<img src="https://user-images.githubusercontent.com/93306929/178179716-762a1a08-0206-4ad5-ac6f-86dace8dd873.PNG"/>
+3. 자바에서 'java project' 파일을 만들고 그 파일을 오른쪽 클릭해서 'properties'로 들어가기. 그 후에 그림처럼 임폴트
+
+<img src="https://user-images.githubusercontent.com/93306929/178179795-b0cdc427-3931-4505-bb3c-91d8887b1405.PNG"/>
+4. 다음으로 XML을 복사. FactoryBuilder(1)를 빌드해서 공용자원인 SqlSessionFactory(3)을 만드는 과정. 자바에서 'ctrl+n을 해서 xml검색 후 생성하고 거기다 '붙여넣기'
+
+<img src="https://user-images.githubusercontent.com/93306929/178179921-7766dfdb-34e7-40f5-862e-e1ea793cd09b.PNG"/>
+5. 다음으로 그림에 나온 Resources를 복사. 자바에서 클래스를 만들고 그 안에 붙여넣기 하고 '임폴트랑 트라이캣치이용' 그 후에 resource 경로는 'xml쪽'으로 설정.
+
+<img src="https://user-images.githubusercontent.com/93306929/178180057-bb519a9c-ba4e-47a8-a4e2-c84b005e5600.PNG"/>
+6. 자바에서 'ctrl+n을 해서 file검색' 후 제너럴 쪽에 있는거 생성 하고 그림처럼 생성.   
+아니면 text쳐서 똑같이 만들고 제목을 ㅁ.properties로 바꿔주기. username은 생성자명 password는 생성자 비밀번호
+
+7.아까 만든 xml으로 돌아가서 '<configuration> 밑에 <properties resource = "ㅁ.properties" />' 를 만들기
+  
+<img src="https://user-images.githubusercontent.com/93306929/178180255-c3027998-f4d7-4f2a-901b-a4213ea478b3.PNG"/>
+8.그림에 보이는 매핑된 Sql 구문을 가지고 MapperXML(11)을 만들거니 복사.   
+자바에서 ctrl+n해서 xml 만들고 붙여넣기 한 뒤에 select쪽은 지워두기.   
+SqlSessionFactory(3).xml 쪽의 밑에 mapper resource쪽을 지금 만든 경로로 설정.
+  
+
