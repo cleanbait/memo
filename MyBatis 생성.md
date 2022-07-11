@@ -18,7 +18,7 @@ MVC : Model(M),View(V),Controller(C)
 
 View = UI   
 Controller 및 Medel = manager   
-값을 저장하고 있는 클래스 (Person,Student) = VO      
+값을 저장하고 있는 클래스 (Person,Student) = VO이용      
 
 M은 데이터와 관련된 처리를 하는 클래스를 별도로 만듦 (DAO : Data Access Object)
 
