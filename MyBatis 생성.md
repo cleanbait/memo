@@ -85,4 +85,12 @@ Mapperinterface mapper = session.getMapper(Mapperinterface.class);
 e.printStackTrace();
 }
 </pre>
-    
+
+## 정리(밑의 사진 참조)
+
+1. 클래스 MybatisConfig는 mybatis-config.xml을 읽어오는 클래스고 이걸 읽어오기 위해 xml안에 properties resource를 만드는 것이다.   
+2. 이 properties값은 데이터베이스에 접속할때 계정과 패스워드가 필요하다. 이걸위해 db.properties를 만든 것이다.   
+3. mybatis-config.xml안의 mapper는 내가 실행할 xml문들이 저장되어 있는 파일이다. 이것이 memberMapper.xml   
+4. Mapperinterface의 안을 체우는 일이 매핑이라고 보면 되고 SqlSession은 DAO클래스에서 처리해주면 memberMapper.xml에 접근하게 되는 것이다.   
+
+<img src="https://user-images.githubusercontent.com/93306929/178180894-1084101e-9ea0-4ba2-8167-70dcc89f75f1.PNG"/>
