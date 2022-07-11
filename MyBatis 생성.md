@@ -73,3 +73,16 @@ Mapperinterface(6)의 Mapper인스턴스를 만들어야 한다.
 interface에다가 미리 지정을 해놓고 그 타입으로만 받게끔 코딩을 할 것이다.   
 리스트의 타입이나 또는 형변환할때 문제 발생 안되게 하려는 것.   
 </pre>
+  
+9. 자바에서 컨트롤n 누르고 인터페이스를 하나 만들어주기. 이름은 Mapperinterface으로 알기 쉽게 지정.
+10. 이제 MapperXML(11)에 있는 메퍼를 <mapper namespace = "Mapperinterface"> 이렇게 경로설정 해주면 연동이 끝난다.
+
+<pre>
+이게 매핑된 Mapperinterface(6)를 만든것. Sqlsession(10)을 만드는건 DAO클래스에서 만들어 주면 된다.
+try (SqlSession session = factory.openSession()){
+Mapperinterface mapper = session.getMapper(Mapperinterface.class);
+} catch (Exception e) {
+e.printStackTrace();
+}
+</pre>
+    
