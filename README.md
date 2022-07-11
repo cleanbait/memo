@@ -227,3 +227,12 @@ create user (계정명) identified by (패스워드)
 * grant (계정의 권한 부여)
 grant resource, create session, create table to (계정명)
 </pre>
+
+## Other
+
+<pre>
+시퀀스
+1. create sequence user_seq; 시퀀스 생성
+2. select user_seq.currval from dual; 증가된 시퀀스 숫자
+3. insert into 테이블명 values (user_seq.nextval, ???, ???); 1씩 증가하게 하기
+</pre>
