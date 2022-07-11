@@ -11,4 +11,4 @@ DTO(Data Transfer Object)는 VO(Value Object)로 바꿔 말할 수 있는데
 간단하게 컨트롤러, 뷰, 비즈니스 계층, 퍼시스턴스 계층을 말하고 각 계층간의
 데이터 교환을 위한 객체이다.
 
-![1200px-MVC-Process svg](https://user-images.githubusercontent.com/93306929/178177268-4fbd4294-3091-493a-b44d-e1a223363b2f.png){: width="200" height="300"}
+![1200px-MVC-Process svg](https://user-images.githubusercontent.com/93306929/178177268-4fbd4294-3091-493a-b44d-e1a223363b2f.png){:width="200" height="300"}
