@@ -48,10 +48,10 @@ where조건절 뒤에 (컬럼명) like '_값%'    _이후 위치에 값이 있�
 * union, union all(합집합)
 두 개의 select 사이에 입력 (union중복제외,all중복포함)
 
----
+--------------
+
 DQL 오라클함수
 특정 기능을 수행하도록 만들어진 것 (자바로 치면 메소드)
----
 
 * upper, lower (대문자, 소문자로 변경)
 upper (컬럼명or문자열), lower(컬럼명or문자열)
@@ -134,6 +134,8 @@ case 대상
         else 일치하는 조건이 없을 경우
 end
 
+--------------
+
 그룹화 함수
 
 * sum, count (합계 갯수)
@@ -147,4 +149,44 @@ from문 뒤에 group by (컬럼명)
 
 * having (그룹화된 대상을 제한)
 group by문 뒤에 having (컬럼명)
+</pre>
+ 
+## DDL(Data Definition Language)
+ 
+<pre>
+1. primary key(기본키) = 고유값 = 다른값과 중복될 수 
+                        없음 = null도 안됨
+2. not null = 중복값 (O) = null(X)
+3. default = 인설트할때 null값이 들어오면 0을 자동으로 줌
+4. unique = 지정한 컬럼이 유일한 값을 가진다
+5. foreign key = 다른 테이블의 열을 참조하여 존재하는 
+                값만 허용
+6. check = 설정한 조건식을 만족하는 데이터만 허용
+
+* create (테이블 생성)
+create table 소유자 계정명 or 테이블명(
+    컴럼명1 데이터타입,
+    컴럼명2 데이터타입,
+    ....
+    );
+
+* rename (테이블 이름 변경)
+rename 변경할테이블명 to 변경후테이블명
+
+* drop (테이블 삭제)
+drop table 테이블명
+
+----------------------------------------------------------------
+
+* alter add (테이블 안의 컬럼 추가)
+alter table 테이블명 add 컬럼명 데이터타입
+
+* alter rename (테이블 안의 컬럼명 변경)
+alter table 테이블명 rename 컬럼명 to 변경할컬럼명
+
+* alter modify (테이블 안의 컬럼 타입 수정)
+alter table 테이블명 modify 컬럼명 데이터타입;
+
+* alter drop (테이블 안의 컬럼 삭제)
+alter table 테이블명 drop column 컬럼명;
 </pre>
