@@ -22,7 +22,7 @@ VO = 값을 저장하고 있는 클래스 (Person,Student)
 
 M은 데이터와 관련된 처리를 하는 클래스를 별도로 만듦 (DAO : Data Access Object)
 
-<img src="https://user-images.githubusercontent.com/93306929/178178336-6c58fd5e-29d7-412a-8715-f569a740ab16.png" width="500" height="500"/>
+<img src="https://user-images.githubusercontent.com/93306929/178178336-6c58fd5e-29d7-412a-8715-f569a740ab16.png" width="700" height="500"/>
 
 
 JDBC란 자바에서 데이터베이스에 접속할 수 있도록 하는 자바 API
