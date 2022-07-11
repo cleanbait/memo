@@ -151,7 +151,7 @@ from문 뒤에 group by (컬럼명)
 group by문 뒤에 having (컬럼명)
 </pre>
  
-## DDL(Data Definition Language)
+## 2. DDL(Data Definition Language)
  
 <pre>
 1. primary key(기본키) = 고유값 = 다른값과 중복될 수 
