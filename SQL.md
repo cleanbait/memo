@@ -235,4 +235,17 @@ grant resource, create session, create table to (계정명)
 1. create sequence user_seq; 시퀀스 생성
 2. select user_seq.currval from dual; 증가된 시퀀스 숫자
 3. insert into 테이블명 values (user_seq.nextval, ???, ???); 1씩 증가하게 하기
+
+DB의 계정 생성
+
+a. CMD창에서 " sqlplus / as sysdba " 타이핑 후 엔터
+b. " create user (만들계정명) identified by (패스워드); "
+c. " grant resource, create session, create table to (계정명); "
+d. SQL 디벨로퍼의 왼쪽 (Oracle 접속) 오른쪽 클릭 후 새 접속
+e. name,사용자 이름 란에 계정명, 비밀번호쪽에 패스워드 입력 후 저장 및 접속
+
+  *sysdba는 오라클에서 최상위 계정
+  *grant resource 오라클 데이터저장소파일의 리소스 사용권한
+  *create session 계정의 접속권한
+  *create table 테이블 생성권한
 </pre>
