@@ -1,4 +1,5 @@
-## <mark>HTML</mark>
+## HTML
+
 <pre>
 1. 텍스트<text>
 
@@ -14,7 +15,7 @@ ul li        순서가 없는 목록
 ol li        순서가 있는 목록
 
 
-2. 테이블 <table>
+2. 테이블<table>
 
 table       표를 만듦 (tr, td th)
 caption     표의 제목
@@ -88,11 +89,13 @@ readonly    : 읽을수만 있고 사용자가 수정못함
 value       : 서버에게 주는 값
 autofocus   : 자동 커서 기능
 name        : 인풋 이름설정
+
 </pre>
 
 # CSS
 
 <pre>
+
 1. 선택자 = 태그, id, class, 가상선택자 등이 있다. || 선택자 { 스타일속성 : 속성값 ; }
 
 * {}            전체선택자
