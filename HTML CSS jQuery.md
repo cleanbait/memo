@@ -137,7 +137,9 @@ fixed    :  고정된 위치에 배치 (브라우저 기준)
 
 스테틱(기본값)을 제외한 나머지 속성들은 top, left, bottom, right를 써서 위치 지정 가능
 </pre>
+
 # jQuery
+
 <pre>
 $(selector).action();
 
