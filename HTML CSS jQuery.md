@@ -89,7 +89,9 @@ value       : 서버에게 주는 값
 autofocus   : 자동 커서 기능
 name        : 인풋 이름설정
 </pre>
+
 # CSS
+
 <pre>
 1. 선택자 = 태그, id, class, 가상선택자 등이 있다. || 선택자 { 스타일속성 : 속성값 ; }
 
@@ -219,7 +221,9 @@ action() 는 [ 요소에서 실행할 명령 ] 을 말한다.
 :selected    : select 태그 내 option 태그 중 선택된 태그를 선택
 :checked     : checkbox 또는 radio 태그에서 현재 checked 된 태그를 선택
 </pre>
+
 # jQuery 이벤트
+
 <pre>
 - 이벤트 (소문자로만 셋팅(대문자 안됨)) -
 
