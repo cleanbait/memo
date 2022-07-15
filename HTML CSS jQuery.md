@@ -1,7 +1,7 @@
 ## HTML
 
 <pre>
-1. 텍스트<text>
+1. 텍스트 <text>
 
 b, strong    글자를 굵게 해주는 태그
 h            텍스트크기 1~6
@@ -15,7 +15,7 @@ ul li        순서가 없는 목록
 ol li        순서가 있는 목록
 
 
-2. 테이블<table>
+2. 테이블 <table>
 
 table       표를 만듦 (tr, td th)
 caption     표의 제목
@@ -27,7 +27,7 @@ colgroup    열을 묶어줌 (col)
 테이블 속성 = colspan, rowspan 합치기
 
 
-3. 링크<link>
+3. 링크 <link>
 
 a      태그    클릭하면 화면 링크타게해줌
 map    태그    img태그에 usermap(#)속성을 설정 후 area태그로 지정
@@ -91,7 +91,7 @@ autofocus   : 자동 커서 기능
 name        : 인풋 이름설정
 
 </pre>
-
+***
 # CSS
 
 <pre>
@@ -141,11 +141,13 @@ absolute :  원하는 위치에 배치 (부모를 기준)
 fixed    :  고정된 위치에 배치 (브라우저 기준)
 
 스테틱(기본값)을 제외한 나머지 속성들은 top, left, bottom, right를 써서 위치 지정 가능
+
 </pre>
 
 # jQuery
 
 <pre>
+
 $(selector).action();
 
 $ 는 jQuery 를 [ 실행 ] 하는것을 말한다.
@@ -223,11 +225,13 @@ action() 는 [ 요소에서 실행할 명령 ] 을 말한다.
 :disabled    : 비활성화된 input 태그 선택
 :selected    : select 태그 내 option 태그 중 선택된 태그를 선택
 :checked     : checkbox 또는 radio 태그에서 현재 checked 된 태그를 선택
+
 </pre>
 
 # jQuery 이벤트
 
 <pre>
+
 - 이벤트 (소문자로만 셋팅(대문자 안됨)) -
 
 click       : 클릭하고 뗏을 때
@@ -259,4 +263,5 @@ val()     : input 태그의 value 속성을 제어
 </pre>
 <pre>
 animate : 지정된 css 속성을 애니메이션 효과를 지정한다.
+
 </pre>
