@@ -114,4 +114,28 @@ const 변수명 = {
 
 ---
 
-2.9부터 
+prompt()   
+두가지의 파라미터를 받는다.   
+하나는 (message)문자, 다른 하나는 default   
+사용자 들에게 값을 가져올 때 썼다고 하지만 매우 오래된 방법이라고 한다.   
+prompt를 안쓰는 이유 : message가 별로 안예쁨, css를 적용할 수 없다.   
+	
+---
+
+연산자		
+typeof 값 = 타입을 보는 방법	
+parseInt("15"); = 스트링 타입을 인트 타입으로 바꿔준다.
+isNaN(); = 인트 타입인지 아닌지 알려준다. 인트를 넣으면 false
+
+||(OR) &&(AND)   
+== 동등연산자, 값만 같으면 true   
+=== 일치연산자, 값과 타입이 모두 같으면 true   
+
+---
+
+# Document
+
+모든 것들은 document로 부터 시작한다.   
+Console에 document를 치면 html을 보여준다.   
+console.dir(document)로 html의 정보들을 자바스크립트로 가져올 수 있다.   
+즉 JavaScript는 HTML에 이미 연결되어 있다.   
