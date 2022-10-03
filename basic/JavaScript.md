@@ -139,3 +139,23 @@ isNaN(); = 인트 타입인지 아닌지 알려준다. 인트를 넣으면 false
 Console에 document를 치면 html을 보여준다.   
 console.dir(document)로 html의 정보들을 자바스크립트로 가져올 수 있다.   
 즉 JavaScript는 HTML에 이미 연결되어 있다.   
+
+---
+
+
+<span style="color:yellow">getElementById : (하나의 element를 가져올때 쓴다)</span>   
+const id = document.getElementById("ID");   
+
+getElementsByClassName : (많은 element를 가져올때 쓴다(array를 반환))   
+const Cname = document.getElementsByClassName("Cname");   
+
+getElementsByTagName : (타입을 이용하여 element를 가져올때 쓴다(array를 반환))   
+const tag = document.getElementsByTagName("h1");   
+
+---
+
+querySelector : CSS selector방식으로 element를 가져올 수 있다. (단 하나의 첫번째 element를 return 해준다)   
+const title = document.querySelector(".hello h1");
+
+querySelectorAll : 모든 element를 가져오고 싶은 경우(array를 반환)   
+const titleAll = document.querySelectorAll(".hello h1");
