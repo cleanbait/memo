@@ -240,3 +240,48 @@ div나 h1 등 element 들은 querySelector getElementById등으로 찾아야한�
 ex) document.querySelector(“h1”);  
 
 ---
+
+# toggle
+
+toggle이란?  
+토큰이 존재한다면 토큰을 제거, 존재하지 않는다면 토큰을 추가한다.  
+
+---
+
+>HTML에서는 이런 문장이 있다고 하고  
+>```HTML
+><h1>click me!</h1>
+>```
+>CSS에서는 이런 문장이 있다고 하자.  
+>```CSS
+>.clicked {
+>    color: tomato;
+>}
+>```
+>그러면 자바스크립트에서  
+>```javaScript
+>function handleTitleClick() {
+>    const clickedClass = "clicked";
+>    if(h1.classList.contains(clickedClass)) {
+>        h1.classList.remove(clickedClass);
+>    } else {
+>    h1.classList.add(clickedClass);
+>    }
+>}
+>```
+>이렇게 구현할 수 있다. 
+>
+>classList : 우리가 class들의 목록으로 작업할 수 있게끔 허용해준다. 
+>contains() : class가 HTML element의 class에 포함되어 있는지 여부  
+>remove() : 제거  
+>add() : 추가  
+
+---
+
+toggle을 쓰게 된다면?  
+```javaScript
+function handleTitleClick() {
+    h1.classList.toggle("clicked");
+}
+```
+한문장으로 정리 가능하다.  
