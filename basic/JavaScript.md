@@ -183,8 +183,9 @@ const title = document.getElementById("hello");
 
 ---
 
-#Event
-on이 붙은 것들은 event이다.   
+# Event  
+console.dir(document)  
+dir의 object에서 on이 붙은 것들은 event이다.   
 모든 event는 js가 listen이 가능하다.   
 
 ```javaScript
