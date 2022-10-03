@@ -193,7 +193,7 @@ dir의 object에서 on이 붙은 것들은 event이다.
 
 HTML element를 가져와서, addEventListener function을 실행("이벤트", 펑션)  
 ```javaScript
-title.addEventListener("click", handleTitleClick); 괄호를 넣지 않는다.  
+title.addEventListener("click", handleTitleClick); 괄호를 넣지 않는다  
 
 const title = document.querySelector(".hello h1");
 
