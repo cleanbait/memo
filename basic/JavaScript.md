@@ -180,3 +180,21 @@ querySelector와 getElementById의 차이점 (하위요소 가져오는 유무)
 const title = document.querySelector("#hello form");
 const title = document.getElementById("hello");
 ```
+
+---
+
+#Event
+on이 붙은 것들은 event이다.   
+모든 event는 js가 listen이 가능하다.   
+
+```javaScript
+HTML element를 가져와서, addEventListener function을 실행("이벤트", 펑션)
+
+const title = document.querySelector(".hello h1");
+
+function handleTitleClick() {
+    title.style.color = "blue";
+}
+
+title.addEventListener("click", handleTitleClick); 괄호를 넣지 않는다.
+```
