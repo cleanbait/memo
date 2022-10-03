@@ -142,8 +142,10 @@ isNaN(); = 인트 타입인지 아닌지 알려준다. 인트를 넣으면 false
 # Document
 
 모든 것들은 document로 부터 시작한다.   
-Console에 document를 치면 html을 보여준다.   
+Console에 document를 치면 html을 보여준다. 
+```javaScript
 console.dir(document)로 html의 정보들을 자바스크립트로 가져올 수 있다.   
+```
 즉 JavaScript는 HTML에 이미 연결되어 있다.   
 
 element.innerText;   
