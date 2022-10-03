@@ -146,6 +146,12 @@ Console에 document를 치면 html을 보여준다.
 console.dir(document)로 html의 정보들을 자바스크립트로 가져올 수 있다.   
 즉 JavaScript는 HTML에 이미 연결되어 있다.   
 
+element.innerText;
+이 속성은 element 안의 text 값들만을 가져옵니다.
+ 
+element.innerHTML;
+innerText와는 달리 innerHTML은 element 안의 HTML이나 XML을 가져옵니다.
+
 ---
 
 ```javaScript
