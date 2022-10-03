@@ -278,10 +278,9 @@ toggle이란?
 
 ---
 
-toggle을 쓰게 된다면?  
+toggle을 쓴다면 한문장으로 정리 가능하다.   
 ```javaScript
 function handleTitleClick() {
     h1.classList.toggle("clicked");
 }
 ```
-한문장으로 정리 가능하다.  
