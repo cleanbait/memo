@@ -25,6 +25,7 @@ JavaScript는
 very_long_variable_name(뱀모양, 파이썬)    
 veryLongVariableName(낙타모양, 자바)   
 
+
 # 변수(variable)의 종류     
 처음에는 var로 통일 되었었다. 하지만 업데이트를 통해 let과 const가 탄생      
 var는 어떠한 규칙도 가지고 있지 않는 변수이다.      
@@ -56,6 +57,7 @@ true (1), false (0)
 
 ---
 
+
 # Arrays(배열) 설정   
 ```javaScript
 const 변수명 = [값1, 값2, 값3];   
@@ -67,6 +69,7 @@ console.log(변수명[0]);
 변수명.push(값);     
 ```
 ---
+
 
 # object(오브젝트) 설정   
 ```javaScript
@@ -94,6 +97,7 @@ const로 지정된 오브젝트 안의 무언가를 업데이트 할 때는 문�
 objectName(박스)자체를 바꾸려 하면 오류     
 
 ---
+
 
 # function(함수)
 
@@ -140,6 +144,7 @@ isNaN(); = 인트 타입인지 아닌지 알려준다. 인트를 넣으면 false
 
 ---
 
+
 # Document
 
 모든 것들은 document로 부터 시작한다.   
@@ -183,6 +188,7 @@ const title = document.getElementById("hello");
 ```
 
 ---
+
 
 # Event  
 listen하고 싶은 event를 찾는 가장 좋은 방법 https://developer.mozilla.org/en-US/docs/Web/API/HTMLHeadingElement  
@@ -240,6 +246,7 @@ div나 h1 등 element 들은 querySelector getElementById등으로 찾아야한�
 ex) document.querySelector(“h1”);  
 
 ---
+
 
 # toggle
 
