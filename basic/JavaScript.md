@@ -188,14 +188,16 @@ console.dir(document)
 dir의 object에서 on이 붙은 것들은 event이다.   
 모든 event는 js가 listen이 가능하다.   
 
-```javaScript
-HTML element를 가져와서, addEventListener function을 실행("이벤트", 펑션)
+---
 
+HTML element를 가져와서, addEventListener function을 실행("이벤트", 펑션)  
+title.addEventListener("click", handleTitleClick); 괄호를 넣지 않는다.  
+
+```javaScript
 const title = document.querySelector(".hello h1");
 
 function handleTitleClick() {
     title.style.color = "blue";
 }
 
-title.addEventListener("click", handleTitleClick); 괄호를 넣지 않는다.
 ```
