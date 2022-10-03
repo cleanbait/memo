@@ -268,6 +268,7 @@ toggle이란?
 >    h1.classList.add(clickedClass);
 >    }
 >}
+>h1.addEventListener("click", handleTitleClick);
 >```
 >이렇게 구현할 수 있다. 
 >
@@ -283,4 +284,5 @@ toggle을 쓴다면 한문장으로 정리 가능하다.
 function handleTitleClick() {
     h1.classList.toggle("clicked");
 }
+h1.addEventListener("click", handleTitleClick);
 ```
