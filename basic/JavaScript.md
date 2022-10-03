@@ -166,6 +166,7 @@ const title = document.querySelector(".hello h1");
 querySelectorAll : 모든 element를 가져오고 싶은 경우(array를 반환)   
 const titleAll = document.querySelectorAll(".hello h1");
 
+---  
 
 querySelector와 getElementById의 차이점 (하위요소 가져오는 유무)
 const title = document.querySelector("#hello form");
