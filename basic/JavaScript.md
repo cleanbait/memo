@@ -185,20 +185,57 @@ const title = document.getElementById("hello");
 
 # Event  
 listen하고 싶은 event를 찾는 가장 좋은 방법 https://developer.mozilla.org/en-US/docs/Web/API/HTMLHeadingElement  
+
 console.dir(document)  
 dir의 object에서 on이 붙은 것들은 event이다.   
 모든 event는 js가 listen이 가능하다.   
 
+event를 사용하는 데에는 두가지 방법이 있다.  
+
 ---
 
-HTML element를 가져와서, addEventListener function을 실행("이벤트", 펑션)  
+방법1 
+
+>HTML element를 가져와서, addEventListener function을 실행("이벤트", 펑션)  
+>```javaScript
+>title.addEventListener("click", handleTitleClick); 괄호를 넣지 않는다  
+>
+>const title = document.querySelector(".hello h1");
+>
+>function handleTitleClick() {
+>    title.style.color = "blue";
+>}
+>
+>```
+
+방법2
+
+>```javaScript
+>title.onclick = handlehandleTitleClick;
+>
+>const title = document.querySelector(".hello h1");
+>
+>function handleTitleClick() {
+>    title.style.color = "blue";
+>}
+>```
+>onclick와 addEventListener의 차이점  
+>addEventListene를 쓰면 removeEventListener를 통해서 event listener를 제거 가능하다.  
+
+---
+
+Window
+
 ```javaScript
-title.addEventListener("click", handleTitleClick); 괄호를 넣지 않는다  
+window.addEventListener("copy", handleWindowCopy);
 
-const title = document.querySelector(".hello h1");
-
-function handleTitleClick() {
-    title.style.color = "blue";
+function handleWindowCopy() {
+    alert("copier!");
 }
-
 ```
+document에서 body,head,title 은 중요해서 언제든  
+ex) document.body 로 가져올수있지만  
+div나 h1 등 element 들은 querySelector getElementById등으로 찾아야한다.  
+ex) document.querySelector(“h1”);  
+
+---
