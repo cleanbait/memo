@@ -11,12 +11,14 @@ Ctrl + Shift + L
 
 HTML에서 CSS와 JavaScript를 가져와서 사용한다.      
 
-CSS는 헤드쪽에     
-link rel="stylesheet" href="style.css"     
-
-JavaScript는     
-script src="script.js" /script   
-
+CSS는 헤드쪽에  
+```javaScript
+<link rel="stylesheet" href="style.css">     
+```
+JavaScript는   
+```javaScript
+<script src="script.js"> </script>   
+```
 ---
 
 변수값의 암묵적인 규칙 공백   
@@ -34,7 +36,7 @@ const 재선언 금지, 재할당 금지
 var 재선언 가능, 재할당 가능      
 
 ---
-
+```javaScript
 const 변수명 = null;   
 let 변수명2;   
 
@@ -47,7 +49,7 @@ NaN (Not a Number) : 숫자가 아님
 
 두가지의 변수 보기 (, 콤마 이용)    
 console.log(변수명, 변수명2);   
-
+```
 true (1), false (0)    
 
 파이썬에서는 None,True,False로 표현    
@@ -55,6 +57,7 @@ true (1), false (0)
 ---
 
 # Arrays(배열) 설정   
+```javaScript
 const 변수명 = [값1, 값2, 값3];   
 
 배열의 index를 찾아 확인 방법   
@@ -62,10 +65,11 @@ console.log(변수명[0]);
 
 기존 배열에 항목 추가    
 변수명.push(값);     
-
+```
 ---
 
 # object(오브젝트) 설정   
+```javaScript
 const objectName = {    
     속성1: "값",   
     속성2: 0,   
@@ -77,13 +81,15 @@ console.log(objectName.속성1);
 console.log(objectName["속성1"]);   
 
 오브젝트안에 속성 추가 및 수정   
+
 추가    
 objectName.속성명 = "값";   
+
 수정    
 objectName.속성2 = objectName.속성2 + 10;   
 objectName.속성3 = false;   
-
-*constant는 바꿀 수 없는게 아닌가?    
+```
+*constant는 바꿀 수 없는게 아닌가?*    
 const로 지정된 오브젝트 안의 무언가를 업데이트 할 때는 문제없지만   
 objectName(박스)자체를 바꾸려 하면 오류     
 
@@ -92,14 +98,14 @@ objectName(박스)자체를 바꾸려 하면 오류
 # function(함수)
 
 function은 코드를 캡슐화해서, 실행을 여러 번 할 수 있게 해준다. (메서드)     
-
+```javaScript
 사용방법      
 function 함수명(a, b) {      
 	console.log("firstNumber = " + a + ", secondNumber = " + b);    
 }   
 
 함수명(1, 2);    
-*함수명 뒤의 괄호 안의 변수들이 function의 함수명 뒤의 변수들로 차례대로 들어간다.   
+함수명 뒤의 괄호 안의 변수들이 function의 함수명 뒤의 변수들로 차례대로 들어간다.   
 
 const 변수명 = {   
     name: "Kim",    
@@ -109,8 +115,8 @@ const 변수명 = {
 }   
 
 변수명.hello("Dongju");    
-
 식으로 응용도 가능    
+```
 
 ---
 
@@ -142,12 +148,12 @@ console.dir(document)로 html의 정보들을 자바스크립트로 가져올 �
 
 ---
 
-
-<span style="color:yellow">getElementById : (하나의 element를 가져올때 쓴다)</span>   
+```javaScript
+getElementById : (하나의 element를 가져올때 쓴다)  
 const id = document.getElementById("ID");   
 
 getElementsByClassName : (많은 element를 가져올때 쓴다(array를 반환))   
-const Cname = document.getElementsByClassName("Cname");   
+const className = document.getElementsByClassName("className");   
 
 getElementsByTagName : (타입을 이용하여 element를 가져올때 쓴다(array를 반환))   
 const tag = document.getElementsByTagName("h1");   
@@ -159,3 +165,5 @@ const title = document.querySelector(".hello h1");
 
 querySelectorAll : 모든 element를 가져오고 싶은 경우(array를 반환)   
 const titleAll = document.querySelectorAll(".hello h1");
+
+```
