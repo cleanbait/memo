@@ -295,3 +295,13 @@ function handleTitleClick() {
 
 h1.addEventListener("click", handleTitleClick);
 ```
+
+---
+
+preventDefault (브라우저가 기본 동작을 실행하지 못하게 막기)  
+preventDefault함수를 기본적으로 갖고 있음  
+```javaScript
+"Hello" + username; ===`Hello${username}`;  
+```
+벡터( ` )표시와 달러( $ )표시를 이용하면 된다.  
+
