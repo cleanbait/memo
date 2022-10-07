@@ -305,3 +305,10 @@ preventDefault함수를 기본적으로 갖고 있음
 ```
 벡터( ` )표시와 달러( $ )표시를 이용하면 된다.  
 
+---
+
+local storage는 browser에서 제공하는 DB로 key:value로 데이터를 저장한다.  
+보는 방법은 f12(검사)->application쪽에 있다.
+localstorage.setItem(,)  
+localstorage.getItem()  
+localstorage.removeItem()  
