@@ -300,12 +300,17 @@ h1.addEventListener("click", handleTitleClick);
 
 preventDefault (브라우저가 기본 동작을 실행하지 못하게 막기)  
 preventDefault함수를 기본적으로 갖고 있음  
+
+# 템플릿리터널
+
 ```javaScript
 "Hello" + username; ===`Hello${username}`;  
 ```
 벡터( ` )표시와 달러( $ )표시를 이용하면 된다.  
 
 ---
+
+# 로컬스토리지
 
 local storage는 browser에서 제공하는 DB로 key:value로 데이터를 저장한다.  
 보는 방법은 f12(검사)->application쪽에 있다.
