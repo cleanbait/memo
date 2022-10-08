@@ -336,3 +336,13 @@ setInterval(interval_TEST, 5000);
 반복이 아닌 한번만 실행하고 싶을 경우  
 setTimeout(실행할 함수, 실행할 함수의 주기/ms)을 쓰면 된다.
 
+# Date
+```javaScript
+function getClock() {
+    const date = new Date();
+    clock.innerText = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+}
+
+getClock();
+setInterval(getClock, 1000);
+```
