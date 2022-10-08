@@ -346,3 +346,25 @@ function getClock() {
 getClock();
 setInterval(getClock, 1000);
 ```
+
+# padStart, padEnd
+스트링에 쓸 수 있는 펑션  
+"문자열".padStart(문자열길이, "문자열길이가 아닐경우 앞쪽에 추가할 문자")  
+"문자열".padEnd(문자열길이, "문자열길이가 아닐경우 뒤쪽에 추가할 문자")  
+
+Date쪽의 코딩으로 시계를 만들면 01:20:03식으로 표현되지 않고 1:20:3으로 표현될 것이다.  
+이것을 두자리의 문자열로 깔끔하게 만들기 위해서 padStart나 padEnd를 쓰면 쉽게 가능하다.  
+
+```javaScript
+function getClock() {
+    const date = new Date();
+    const hours = String(date.getHours()).padStart(2, "0");
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    const seconds = String(date.getSeconds()).padStart(2, "0");
+
+    clock.innerText = `${hours}:${minutes}:${seconds}`;
+}
+
+getClock();
+setInterval(getClock, 1000);
+```
