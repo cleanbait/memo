@@ -389,12 +389,12 @@ ex)
 const array_list = [
 	{
 		hello: "hello",
-		javaScript: "javaScript",
+		javaScript: "javaScript"
 	},
 	{
 		hello2:"hello2",
-		javaScript2:"javaScript2",
-	}
-]
+		javaScript2:"javaScript2"
+	},
+];
 console.log(Math.floor(Math.random()*array_list.length));
 ```
