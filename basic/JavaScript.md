@@ -420,8 +420,8 @@ document.body.appendChild(hello);
 // <h1>태그 코드를 가진 hello라는 변수가 body태그 내부 맨 끝에 생성된다.
 ```
 ---
-참고로 console.dir(hello);로 여러 속성들을 확인 후 추가할 수도 있다.
-ex)
+참고로 console.dir(hello);로 여러 속성들을 확인 후 추가할 수도 있다.  
+ex)  
 ```javaScript
 hello.classList.add("addClassName");
 ```
