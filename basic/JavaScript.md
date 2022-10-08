@@ -398,3 +398,28 @@ const array_list = [
 ];
 console.log(Math.floor(Math.random()*array_list.length));
 ```
+
+# 자바스크립트에서 HTML 코드 만들기
+
+document.createElement(" ") 요소 추가  
+document.body.appenChild( ) 바디 맨뒤 추가  
+document.body.prepend( ) 바디 맨앞 추가  
+document.body.insertBefore(삽입할 노드, 기준이 될 노드) 기준이 되는 노드 앞에 추가  
+
+---
+```javaScript
+const hello = document.createElement( "h1" )
+// <h1></h1> 코드 생성
+```
+```javaScript
+hello.innerHTML = "hello";
+// hello안에 텍스트 추가
+```
+```javaScript
+document.body.appendChild(hello);
+// <h1>태그 코드를 가진 hello라는 변수가 body태그 내부 맨 끝에 생성된다.
+```
+---
+
+
+
