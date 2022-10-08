@@ -317,3 +317,22 @@ local storage는 browser에서 제공하는 DB로 key:value로 데이터를 저�
 localstorage.setItem(,)  
 localstorage.getItem()  
 localstorage.removeItem()  
+
+# interval
+시간적인 간격, 두가지의 아규먼트를 받는다.
+
+---
+setInterval(실행할 함수, 실행할 함수의 주기/ms)
+```javaScript
+function interval_TEST() {
+	console.log("hello");
+}
+setInterval(interval_TEST, 5000);
+```
+5초 주기로 interval_TEST의 함수가 실행된다.
+
+---
+
+반복이 아닌 한번만 실행하고 싶을 경우  
+setTimeout(실행할 함수, 실행할 함수의 주기/ms)을 쓰면 된다.
+
