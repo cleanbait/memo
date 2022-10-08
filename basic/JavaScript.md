@@ -368,3 +368,33 @@ function getClock() {
 getClock();
 setInterval(getClock, 1000);
 ```
+
+# random
+
+Math.random() 랜덤함수  
+Math.round() 반올림  
+Math.ceil() 올림  
+Math.floor() 내림  
+
+ex)
+```javaScript
+10개의 객체가 들어있는 배열같은 경우는 Math.floor(Math.random()*10)의 방식으로 쓴다.
+```
+위의 방식은 배열이 추가될때마다 숫자를 바꿔줘야하니 배열명.length를 쓰는것이 좋다.
+
+---
+
+정리
+```javaScript
+const array_list = [
+	{
+		hello: "hello",
+		javaScript: "javaScript",
+	},
+	{
+		hello2:"hello2",
+		javaScript2:"javaScript2",
+	}
+]
+console.log(Math.floor(Math.random()*array_list.length));
+```
