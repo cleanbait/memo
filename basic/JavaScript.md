@@ -426,4 +426,101 @@ ex)
 hello.classList.add("addClassName");
 ```
 
+# 배운것들 총 정리
 
+input[type="text"]에 타이핑 후 엔터를 치면 JavaScript에 있는 toDoForm.addEventListener("submit", handleToDoSubmit);에 의해서 handleToDoSubmit으로 간다.  
+
+HTML
+```html
+<form id="todo-form">
+   <input type="text" placeholder="Write a To Do and Press" required />
+</form>
+<ul id="todo-list"></ul>
+```
+
+JavaScript
+```javaScript
+const toDoForm = document.getElementById("todo-form");
+const toDoInput = document.querySelector("#todo-form input");
+const toDoList = document.getElementById("todo-list");
+
+let toDos = [];
+
+function paintToDo(newTodo) {
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    const button = document.createElement("button");
+
+    li.id = newTodo.id;
+    li.appendChild(span);
+    span.innerHTML = newTodo.text;
+
+    button.innerHTML = "Delete";
+    button.addEventListener("click", deleteButton);
+
+    li.appendChild(button);
+    toDoList.appendChild(li);
+}
+
+function deleteButton(event) {
+    const li = event.target.parentElement;
+    console.log(li.id);
+    li.remove(); 
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos(); 
+}
+
+function saveToDos() {
+    localStorage.setItem("todos",JSON.stringify(toDos));
+}
+
+function handleToDoSubmit(event) {
+    event.preventDefault();
+    const newTodo = toDoInput.value;
+    toDoInput.value = "";
+    const newTodoObj = {
+        text:newTodo,
+        id: Date.now()
+    }
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
+    saveToDos();
+}
+
+toDoForm.addEventListener("submit", handleToDoSubmit);
+
+const savedToDos = localStorage.getItem("todos");
+
+if(savedToDos !== null) {
+    const parsedToDos = JSON.parse(savedToDos);
+    toDos = parsedToDos;
+    parsedToDos.forEach(paintToDo);
+}
+```
+
+### localStorage.setItem("todos",toDos); 가 아닌 JSON.stringify를 쓰는 이유
+localStorage는 단순 텍스트로만 저장되기 때문에 JSON.stringify로 array처럼 생긴 string으로 저장한다.  
+이유는 JSON.parse()를 통해 string data type을 array로 바꿀 수 있기에 인덱스 값을 이용해 value를 가져올 수 있다.  
+
+```javaScript
+const savedToDos = localStorage.getItem("todos");
+
+if(savedToDos !== null) {
+    const parsedToDos = JSON.parse(savedToDos);
+    toDos = parsedToDos;
+    parsedToDos.forEach(paintToDo);
+}
+```
+### 포이치를 쓰는 두가지 방법  
+```javaScript
+기존방법
+parsedToDos.forEach(HelloFE);
+function HelloFE(item) {
+    console.log(item);
+}
+
+새로운방법
+parsedToDos.forEach((item) => console.log(item)); 
+```
+위의 두 가지는 동일하다.  
+새로운 방법의 item이름명은 임의지정하면 된다.
