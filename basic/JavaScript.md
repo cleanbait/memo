@@ -451,46 +451,70 @@ function paintToDo(newTodo) {
     const span = document.createElement("span");
     const button = document.createElement("button");
 
+    // li의 고유번호 부여
     li.id = newTodo.id;
+    
+    // li안에 <span></span> 생성
     li.appendChild(span);
+    
+    // span안에 input에 쓴 newTodo.text 넣기
     span.innerHTML = newTodo.text;
 
+    // 버튼생성
     button.innerHTML = "Delete";
+    
+    // 버튼 누를시 deleteButton펑션 이동
     button.addEventListener("click", deleteButton);
 
+    // li에 버튼 생성
     li.appendChild(button);
+    
+    // 만들어진 li를 뷰에 생성
     toDoList.appendChild(li);
 }
 
+// 버튼 누를시 삭제
 function deleteButton(event) {
+    // 버튼의 부모를 찾고 그것을 li변수에 저장
     const li = event.target.parentElement;
-    console.log(li.id);
+    // 버튼의 부모 삭제(li)
     li.remove(); 
+    // 로컬스토리지 id와 버튼의 id를 비교하여 필터링 후 toDos(배열)에 저장 [필터는 True만 리턴한다.]
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    // 로컬스토리지에 저장
     saveToDos(); 
 }
 
+// 로컬스토리지에 저장
 function saveToDos() {
     localStorage.setItem("todos",JSON.stringify(toDos));
 }
 
+// 메인 펑션
 function handleToDoSubmit(event) {
+    // 이벤트 막기
     event.preventDefault();
+    // 인풋타입에 쓴 value를 newTodo에 저장
     const newTodo = toDoInput.value;
+    // HTML의 인풋타입에 쓴 value를 초기화
     toDoInput.value = "";
+    // 오브젝트 생성(인풋타입에 쓴 value, 랜덤숫자)
     const newTodoObj = {
         text:newTodo,
         id: Date.now()
     }
+    // toDos(배열)에 newTodoObj(오브젝트) push
     toDos.push(newTodoObj);
+    // HTML에 li, span(newTodo.text), button생성
     paintToDo(newTodoObj);
+    // 로컬스토리지에 저장
     saveToDos();
 }
-
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-const savedToDos = localStorage.getItem("todos");
 
+// 로컬스토리지 확인 및 배열 
+const savedToDos = localStorage.getItem("todos");
 if(savedToDos !== null) {
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
@@ -524,3 +548,23 @@ parsedToDos.forEach((item) => console.log(item));
 ```
 위의 두 가지는 동일하다.  
 새로운 방법의 item이름명은 임의지정하면 된다.
+
+### 필터
+```javaScript
+const hello = [{text:"lalala"}, {text:"lelele"}, {text:"lololo"}];
+
+(방법1)
+function superFilter(item) { return item.text !== "lelele" };
+hello.filter(superFilter);
+
+(방법2)
+hello.filter((item) => item.text !== "lelele");
+
+리턴값이 true인 text:"lalala"와 text:"lololo"가 남게된다.
+```
+
+단, hello의 값이 삭제되는 것은 아니다.  
+console.log(hello)를 해 보면 그대로 남아있다.  
+저 필터링 한 값을 다른 변수에 넣거나 덮어쓰는 방식으로 쓸 수 있다.  
+
+---
