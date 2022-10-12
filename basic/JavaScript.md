@@ -568,3 +568,25 @@ console.log(hello)를 해 보면 그대로 남아있다.
 저 필터링 한 값을 다른 변수에 넣거나 덮어쓰는 방식으로 쓸 수 있다.  
 
 ---
+
+# navigator 함수를 이용해 사용자의 위치를 알아내는 코드 작성.
+
+navigator.geolocation.getCurrentPosition ( ) 라는 코드를 작성해준다.  
+이때 getCurrentPosition 은 2개의 argument가 필요하다. 앞쪽에는 True일때 실행될 함수를, 뒤에는 false일때 실행될 함수를 입력한다.  
+
+```javaScript
+true 함수가 실행될 때
+function true(position){
+const lat = position.coords.latitude;
+const lng = position.coords.longitude;
+console.log("You live in", lat, lng);
+}
+```
+자바스크립트가 position으로 user의 위치를 전달해준다.  
+position은 object 이고 위도와 경도 값이 들어있다.  
+positon.coords.latitude와 position.coords.longitude 를 변수에 저장하고 보여줄 수 있다.  
+
+---
+
+# Weather API
+https://openweathermap.org/
