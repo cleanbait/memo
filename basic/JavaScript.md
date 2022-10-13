@@ -597,7 +597,8 @@ API : 다른 서버와 이야기를 할 수 있는 방법
 const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}`;
 이 URL에 자신의 위도와 경도, API를 넣어준다. (벡틱을 사용하면 보기 편하다)
 들어가 보면 여러 정보를 볼 수 있다.
-
+```
+```javaScript
 [HTML에 가져가기]
 fetch(weather_url)
     .then(response => response.json())
@@ -607,6 +608,8 @@ fetch(weather_url)
         city.innerText = data.name;
         weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
     });
+```
+```javaScript
 fetch API의 응답(response) 객체는json()를 제공하고 있어 JSON.parse() 대신 사용할 수 있다.
 response.json()메서드를 호출하면 JSON 데이터를 javascript 객체로 변환한다.
 
