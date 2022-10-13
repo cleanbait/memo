@@ -578,8 +578,8 @@ navigator.geolocation.getCurrentPosition ( ) 라는 코드를 작성해준다.
 true 함수가 실행될 때
 function true(position){
 const lat = position.coords.latitude;
-const lng = position.coords.longitude;
-console.log("You live in", lat, lng);
+const lon = position.coords.longitude;
+console.log("You live in", lat, lon);
 }
 ```
 자바스크립트가 position으로 user의 위치를 전달해준다.  
@@ -589,4 +589,38 @@ positon.coords.latitude와 position.coords.longitude 를 변수에 저장하고 
 ---
 
 # Weather API
-https://openweathermap.org/
+날씨 API 사이트 및 doc [https://openweathermap.org/current]  
+API : 다른 서버와 이야기를 할 수 있는 방법  
+구글 확장 앱 : [JSONView](https://chrome.google.com/webstore/detail/jsonview/gmegofmjomhknnokphhckolhcffdaihd/related?hl=ko)  
+
+```javaScript
+const weather_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}`;
+이 URL에 자신의 위도와 경도, API를 넣어준다. (벡틱을 사용하면 보기 편하다)
+들어가 보면 여러 정보를 볼 수 있다.
+
+[HTML에 가져가기]
+fetch(weather_url)
+    .then(response => response.json())
+    .then(data => {
+        const weather = document.querySelector("#weather span:first-child");
+        const city = document.querySelector("#weather span:last-child");
+        city.innerText = data.name;
+        weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+    });
+```
+[fetch함수(Promise)]  
+fetch() 함수는 첫번째 인자로 URL, 두번째 인자로 옵션 객체를 받고, Promise 타입의 객체를 반환한다.  
+반환된 객체는, API 호출이 성공했을 경우에는 응답(response) 객체를 resolve하고, 실패했을 경우에는 예외(error) 객체를 reject한다고 한다.  
+```javaScript
+fetch(url, options)
+  .then((response) => console.log("response:", response))
+  .catch((error) => console.log("error:", error));
+```
+
+Promise란?  
+자바스크립트 비동기 처리에 사용되는 객체, 주로 서버에서 받아온 데이터를 화면에 표시할 때 사용  
+당장 뭔가 일어나지 않고 시간이 좀 걸린 뒤에 일어난다.  
+서버에 무언가를 물어 봤는데 응답하는 데 5분 걸린다고 하면 응답을 기다려야 한다.  
+그래서 URL을 fetch하고 그 다음으로 response를 받아야 한다.  
+then : promise 가 종료가 되면 resolve 에 들어간 값을 받을 수 있다.  
+catch : reject 된 경우에는 then 으로 받을 경우, 에러가 발생한다, 이 때 catch 를 사용하여 에러를 잡아줄 수 있다.  
