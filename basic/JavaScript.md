@@ -607,6 +607,12 @@ fetch(weather_url)
         city.innerText = data.name;
         weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
     });
+fetch API의 응답(response) 객체는json()를 제공하고 있어 JSON.parse() 대신 사용할 수 있다.
+response.json()메서드를 호출하면 JSON 데이터를 javascript 객체로 변환한다.
+
+JSON.parse()와 response.json()의 차이
+JSON.parse()에는 응답(response) 바디만을 넣어야한다. 바디와 헤더가 들어가면 데이터를 읽어오지 못한다.
+response.json()에는 응답 헤더가 들어가도 바디만 읽어서 불러온다.
 ```
 [fetch함수(Promise)]  
 fetch() 함수는 첫번째 인자로 URL, 두번째 인자로 옵션 객체를 받고, Promise 타입의 객체를 반환한다.  
