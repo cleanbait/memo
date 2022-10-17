@@ -59,11 +59,11 @@ add-on설치
 
 3.3 초기 셋팅
 
-JDK 설정
-Window -> preferences -> java -> installed JREs -> JDK 경로 설정
-톰캣 설정
-Window -> preferences -> Server -> Runtime Environments -> 아파치 톰캣 설정 (아파치 홈페이지에서 9버전 이상 다운받기)
-UTF-8 설정
-Window -> preferences -> web -> html,css,jsp (UTF-8)
-웹 브라우저 설정
-Window -> preferences -> General -> Web Browser -> Chrome
+JDK 설정  
+Window -> preferences -> java -> installed JREs -> JDK 경로 설정  
+톰캣 설정  
+Window -> preferences -> Server -> Runtime Environments -> 아파치 톰캣 설정 (아파치 홈페이지에서 9버전 이상 다운받기)  
+UTF-8 설정  
+Window -> preferences -> web -> html,css,jsp (UTF-8)  
+웹 브라우저 설정  
+Window -> preferences -> General -> Web Browser -> Chrome  
