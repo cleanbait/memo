@@ -7,3 +7,7 @@ Meta에서 개발한 오픈 소스 자바스크립트 라이브러리이다.
 
 CDN추가 react, react-dom  
 > https://ko.reactjs.org/docs/add-react-to-a-website.html#gatsby-focus-wrapper  
+React JS - 어플리케이션이 아주 인터랙티브하도록 만들어주는 library. 엔진과 같다.  
+React-dom - library 또는 package. 모든 react element들을 HTML body에 둘 수 있도록 해줌.  
+ReactDOM.render() - render의 의미는 react element를 가지고 HTML로 만들어 배치한다는 것. 즉, 사용자에게 보여준다는 의미  
+ReactDOM.render(span, span이 가야할 위치)  
