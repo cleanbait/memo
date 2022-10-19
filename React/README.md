@@ -27,30 +27,31 @@ props에 onClick: () => console.log("I'm clicked")
 ReactDOM.render() - react element를 가지고 HTML로 만들어 배치한다는 것. 즉, 사용자에게 보여준다는 의미  
 
 # JSX
+자바스크립트를 확장한 문법,보통의 HTML과 비슷하다.  
 
-위의 React.createElement를 쓰는 예시
-```javaScript
-const element = React.createElement(
-  'h1',
-  {className: 'greeting'},
-  'Hello, world!'
-);
-```
-JSX
-```javaScript
-const element = (
-  <h1 className="greeting">
-    Hello, world!
-  </h1>
-);
-```
-JSX이 훨씬 익숙하고 간편하다.
+>위의 React.createElement를 쓰는 예시
+>```javaScript
+>const element = React.createElement(
+>  'h1',
+>  {className: 'greeting'},
+>  'Hello, world!'
+>);
+>```
+>JSX
+>```javaScript
+>const element = (
+>  <h1 className="greeting">
+>    Hello, world!
+>  </h1>
+>);
+>```
+>
+JSX로 표현하는것이 훨씬 익숙하고 간편하다.
 
-그래서 JSX를 쓰기위해서는 React.createElement의 문법으로 변환해주는 변환기를 설치해야 한다.  
+단, JSX를 쓰기위해서는 React.createElement의 문법으로 변환해주는 변환기를 설치해야 한다.  
 
 ---
 
 ### Babel standalone
-https://unpkg.com/@babel/standalone/babel.min.js  
-자바스크립트 src에 정의해주고
-함수나 변수를 쓸 스크립트를 <script type="text/babel">로 바꿔준다.
+https://unpkg.com/@babel/standalone/babel.min.js (JSX로 적은 코드를 브라우저가 이해할 수 있는 형태로 바꿔준다)  
+자바스크립트 src에 정의해주고 함수나 변수를 쓸 스크립트를 <script type="text/babel">로 바꿔준다.
