@@ -67,6 +67,7 @@ https://unpkg.com/@babel/standalone/babel.min.js (JSX로 적은 코드를 브라
 Ex)
 ```javaScript
 1. div의 id를 가져오기
+  
 const root = document.getElementById("root");
 
 2-1. 일반적인 함수(Function)
@@ -79,6 +80,7 @@ function Title() {
 }
 
 2-2. 화살표 함수(ArrowFunction)
+  
 const Button = () => (
   <button 
     style={{
@@ -91,6 +93,7 @@ const Button = () => (
 );
 
 3. 만들어진 컴포넌트를 다른 컴포넌트 안에 넣는 방법
+  
 const Container = () => (
   <div>
     <Title/>
@@ -99,5 +102,6 @@ const Container = () => (
 );
 
 4. render를 통해 html으로 보내기
+  
 ReactDOM.render(<Container/>, root);
 ```
