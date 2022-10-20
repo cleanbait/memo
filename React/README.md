@@ -104,3 +104,44 @@ ReactDOM.render(<Container/>, root);
 점점 보기 편리해지고 있다.
   
 ---
+
+### 리 렌더링
+방식에는 여러 방법이 있다.  
+무식한 방법으로는 아래의 예제가 있다.  
+```HTML
+<body>
+    <div id="root"></div>
+</body>
+```
+```JavaScript
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">     
+  //div id를 가져옴
+  const root = document.getElementById("root");
+  let counter = 0;
+
+  function countUp() {
+    counter = counter +1;
+      render();
+    }
+
+  function render() {
+    ReactDOM.render(<Container/>, root);
+  }
+
+  const Container = () => (
+    <div>
+      <h3>Total clicks: {counter}</h3>
+      <button onClick={countUp}>Click me</button>
+    </div>
+  );
+
+  // render로 html으로 보냄
+  render();
+</script>
+```
+이 방법은 HTML페이지를 렌더링 할때 계속적으로 함수를 이용하여 렌더링 해줘야한다.  
+하나의 함수라면 괜찮겠지만 많은 함수들을 렌더링 한다면 그 함수들을 줄줄히 적어줘야 한다.  
