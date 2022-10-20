@@ -55,3 +55,49 @@ JSX로 표현하는것이 훨씬 익숙하고 간편하다.
 ### Babel standalone
 https://unpkg.com/@babel/standalone/babel.min.js (JSX로 적은 코드를 브라우저가 이해할 수 있는 형태로 바꿔준다)  
 자바스크립트 src에 정의해주고 함수나 변수를 쓸 스크립트를 <script type="text/babel">로 바꿔준다.
+
+---
+
+### 규칙
+
+1. 직접 만든 컴포넌트의 첫 글자는 반드시 대문자여야 한다.
+2. 소문자면 React랑 JSX는 HTML 태그라고 인식한다.
+3. 직접 만든 컴포넌트들은 전부 함수로 만들어 줘야 한다.
+
+Ex)
+```javaScript
+1. div의 id를 가져오기
+const root = document.getElementById("root");
+
+2-1. 일반적인 함수(Function)
+function Title() {
+  return (
+    <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+    Hello i'm a title
+    </h3>
+  );
+}
+
+2-2. 화살표 함수(ArrowFunction)
+const Button = () => (
+  <button 
+    style={{
+    backgroundColor: "tomato",
+    }}
+    onClick={() => console.log("im clicked")}
+  >
+    Click me
+  </button>
+);
+
+3. 만들어진 컴포넌트를 다른 컴포넌트 안에 넣는 방법
+const Container = () => (
+  <div>
+    <Title/>
+    <Button/>
+  </div>
+);
+
+4. render를 통해 html으로 보내기
+ReactDOM.render(<Container/>, root);
+```
