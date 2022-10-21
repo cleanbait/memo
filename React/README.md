@@ -106,7 +106,7 @@ ReactDOM.render(<Container/>, root);
   
 ---
 
-### 리 렌더링
+# 리 렌더링
 방식에는 여러 방법이 있다.  
 무식한 방법으로는 아래의 예제가 있다.  
 ```HTML
@@ -145,4 +145,14 @@ ReactDOM.render(<Container/>, root);
 </script>
 ```
 이 방법은 HTML페이지를 렌더링 할때 계속적으로 함수를 이용하여 렌더링 해줘야한다.  
-하나의 함수라면 괜찮겠지만 많은 함수들을 렌더링 한다면 그 함수들을 줄줄히 적어줘야 한다.  
+하나의 함수라면 괜찮겠지만 많은 함수들을 렌더링 한다면 render();와 같은 함수를 줄줄히 적어줘야 한다.  
+
+---
+
+### React.useState
+```javaScript
+const [data, modifier] = React.useState();
+```
+useState는 배열을 하나 준다. [data, data값을 바꿀때 사용할 function]  
+modifier 함수는 값을 하나 받는데 그 값으로 업데이트하고 리렌더링을 해준다.  
+즉, ReactDOM.render를 계속해서 함수쪽에 정의해주지 않아도 렌더링을 할 수 있다.  
