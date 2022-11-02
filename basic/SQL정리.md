@@ -248,4 +248,6 @@ e. name,사용자 이름 란에 계정명, 비밀번호쪽에 패스워드 입�
   *grant resource 오라클 데이터저장소파일의 리소스 사용권한
   *create session 계정의 접속권한
   *create table 테이블 생성권한
+  
+ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
 </pre>
